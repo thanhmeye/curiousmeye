@@ -1,0 +1,72 @@
+---
+---
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>About — Mai Nguyen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Be+Vietnam+Pro:wght@300;400;500&subset=vietnamese&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles/global.css" />
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-logo">curiousmeye</a>
+    <div class="nav-links">
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <section class="about-section">
+    <h1 class="about-heading">About</h1>
+    <div class="about-bio">
+      <p>Hi! I'm Mai, a multidisciplinary designer and maker, with a design background from Linnaeus University, Sweden and mechanical engineering from the National University of Singapore.</p>
+      <p>I enjoy working at the intersection of materials, technology, sustainability and social entrepreneurship. For more than a decade, I have built things ranging from factory automation lines, to educational tools and maker ecosystems, as well as led grassroot fabrication labs and re-imagined traditional crafts.</p>
+      <p>Throughout my career, I have collaborated with artisans, startups, companies and non-profit organisations including IKEA, UNESCO and the Fab City Foundation to design household products, co-creation workshops and innovation programs.</p>
+      <p>These days, my practice moves between hands-on experimentation, systems-level designs and community education.</p>
+    </div>
+  </section>
+
+</body>
+</html>
+
+<style>
+  .about-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    padding-bottom: 6rem;
+  }
+
+  .about-heading {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 400;
+    line-height: 1;
+    padding-top: 0.25rem;
+  }
+
+  .about-bio {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .about-bio p {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    font-weight: 300;
+    max-width: 60ch;
+  }
+
+  @media (max-width: 700px) {
+    .about-section {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+</style>

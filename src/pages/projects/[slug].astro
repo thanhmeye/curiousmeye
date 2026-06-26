@@ -1,0 +1,271 @@
+---
+import { projects } from '../../data/projects.js';
+
+export function getStaticPaths() {
+  return projects.map((p) => ({ params: { slug: p.slug }, props: { project: p } }));
+}
+
+const { project } = Astro.props;
+---
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>{project.title} — Mai Nguyen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Be+Vietnam+Pro:wght@300;400;500&subset=vietnamese&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles/global.css" />
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-logo">curiousmeye</a>
+    <div class="nav-links">
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <article class="project-page">
+
+    <header class="project-header">
+      <h1 class="project-title">{project.title}</h1>
+      <dl class="project-meta">
+        {project.date && (
+          <div class="meta-row">
+            <dt>Date</dt>
+            <dd>{project.date}</dd>
+          </div>
+        )}
+        {project.city && (
+          <div class="meta-row">
+            <dt>City</dt>
+            <dd>{project.city}</dd>
+          </div>
+        )}
+        {project.collaborators.length > 0 && (
+          <div class="meta-row">
+            <dt>Collaborators</dt>
+            <dd>{project.collaborators.join(', ')}</dd>
+          </div>
+        )}
+      </dl>
+    </header>
+
+    {project.description && project.description.length > 0 && (
+      <section class="project-description">
+        {(Array.isArray(project.description) ? project.description : [project.description]).map((para) => (
+          <p>{para}</p>
+        ))}
+      </section>
+    )}
+
+    {project.slides && (
+      <section class="project-slides">
+        <div class="slides-wrapper">
+          <iframe src={project.slides} allowfullscreen></iframe>
+        </div>
+      </section>
+    )}
+
+    {project.video && (
+      <section class="project-video">
+        {project.video.endsWith('.mp4') ? (
+          <video controls playsinline>
+            <source src={project.video} type="video/mp4" />
+          </video>
+        ) : (
+          <div class="video-wrapper">
+            <iframe src={project.video} allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        )}
+      </section>
+    )}
+
+    {project.images.length > 0 && (
+      <section class:list={["project-images", { zoomable: project.zoomable }]}>
+        {project.images.map((src) => (
+          <figure>
+            <img src={src} alt={project.title} />
+          </figure>
+        ))}
+      </section>
+    )}
+
+  </article>
+
+</body>
+</html>
+
+<style>
+  .project-page {
+    max-width: 860px;
+    padding-bottom: 6rem;
+  }
+
+  .project-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: start;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .project-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 400;
+    line-height: 1.1;
+  }
+
+  .project-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 0.5rem;
+  }
+
+  .meta-row {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 1rem;
+  }
+
+  dt {
+    font-size: 0.65rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    min-width: 7rem;
+    flex-shrink: 0;
+  }
+
+  dd {
+    font-size: 0.9rem;
+    font-weight: 300;
+  }
+
+  .project-description {
+    margin-bottom: 3rem;
+  }
+
+  .project-description p {
+    font-size: 1rem;
+    line-height: 1.85;
+    font-weight: 300;
+    max-width: 65ch;
+    margin-bottom: 1.5rem;
+  }
+
+  .project-description p:last-child {
+    margin-bottom: 0;
+  }
+
+  .project-slides {
+    margin-bottom: 3rem;
+    max-width: 860px;
+  }
+
+  .slides-wrapper {
+    position: relative;
+    padding-bottom: 75%;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .slides-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .project-video {
+    margin-bottom: 3rem;
+    max-width: 860px;
+  }
+
+  .project-video video {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .project-images {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .project-images figure {
+    margin: 0;
+  }
+
+  .project-images img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .project-images.zoomable figure {
+    overflow: hidden;
+    cursor: zoom-in;
+  }
+
+  .project-images.zoomable img {
+    transition: transform 0.2s ease;
+    transform-origin: 50% 50%;
+  }
+
+  @media (max-width: 600px) {
+    .project-header {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.project-images.zoomable figure').forEach((figure) => {
+    const img = figure.querySelector('img');
+    let zoomed = false;
+
+    figure.addEventListener('click', () => {
+      zoomed = !zoomed;
+      img.style.transform = zoomed ? 'scale(4)' : 'scale(1)';
+      figure.style.cursor = zoomed ? 'zoom-out' : 'zoom-in';
+    });
+
+    figure.addEventListener('mousemove', (e) => {
+      if (!zoomed) return;
+      const rect = figure.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      img.style.transformOrigin = `${x}% ${y}%`;
+    });
+  });
+</script>

@@ -1,0 +1,144 @@
+---
+---
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Contact — Mai Nguyen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Be+Vietnam+Pro:wght@300;400;500&subset=vietnamese&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles/global.css" />
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-logo">curiousmeye</a>
+    <div class="nav-links">
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <section class="contact-section">
+    <h1 class="contact-heading">Contact</h1>
+    <div class="contact-body">
+      <p class="contact-intro">I'm always open to conversations about design, making, collaboration, or anything in between.</p>
+      <form action="https://formspree.io/f/xbdvjgww" method="POST" class="contact-form">
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+</body>
+</html>
+
+<style>
+  .contact-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    padding-bottom: 6rem;
+  }
+
+  .contact-heading {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 400;
+    line-height: 1;
+    padding-top: 0.25rem;
+  }
+
+  .contact-body {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .contact-intro {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    font-weight: 300;
+    max-width: 50ch;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 480px;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  label {
+    font-size: 0.65rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+
+  input,
+  textarea {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 300;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--color-border);
+    padding: 0.5rem 0;
+    color: var(--color-text);
+    outline: none;
+    resize: none;
+    transition: border-color 0.2s;
+  }
+
+  input:focus,
+  textarea:focus {
+    border-color: var(--color-text);
+  }
+
+  button {
+    align-self: flex-start;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: var(--color-text);
+    color: var(--color-bg);
+    border: none;
+    padding: 0.75rem 2rem;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+
+  button:hover {
+    opacity: 0.75;
+  }
+
+  @media (max-width: 700px) {
+    .contact-section {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+</style>

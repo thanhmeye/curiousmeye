@@ -1,17 +1,50 @@
 ---
-
+import { projects } from '../data/projects.js';
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Mai — Designer & Maker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Be+Vietnam+Pro:wght@300;400;500&subset=vietnamese&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles/global.css" />
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-logo">curiousmeye</a>
+    <div class="nav-links">
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1 class="hero-name">Mai<br /><em>Nguyen</em></h1>
+    <div class="hero-tagline">
+      <p>In an ideal world, what would you like to see?</p>
+      <p class="hero-tagline-indent">For me, I'd like to see circular and bio-materials by default, a biodiverse planet, as well as joyful and sustainable living. Below are some of my projects on the journey to design a more sustainable future.</p>
+    </div>
+  </section>
+
+  <section class="grid-section">
+    <div class="project-grid">
+      {projects.map((p) => (
+        <a href={`/projects/${p.slug}`} class="card">
+          <div class="card-thumb">
+            <img src={p.thumb} alt={p.title} onerror="this.parentElement.classList.add('no-img')" />
+          </div>
+          <div class="card-info">
+            <span class="card-category">{p.category}</span>
+            <span class="card-title">{p.title}</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+</body>
 </html>
