@@ -63,7 +63,11 @@ export const projects = [
       "Developed in collaboration with a regional Swedish water utility company experiencing water scarcity, this project bridges the gap between passive climate awareness and active community-wide sustainability. By blending the core tenets of service design, Systems thinking, and behavioral design, the project reframes high school students not just as learners, but as vital catalysts for regional ecological resilience. The challenge required designing an engaging pedagogical model that successfully transforms passive students into proactive agents of change within their own households and broader communities. To achieve this, the solution leverages a deeply interdisciplinary ecosystem combining design, business, and engineering expertise.",
       "The framework relies on three core pillars: child-led communication to empower youth to own the environmental narrative and educate their families, gamification to transform water-saving practices into an interactive and collaborative learning experience, and nudge theory to embed behavioral cues in daily routines. This pedagogical approach was prototyped and tested through two pilot workshops involving 46 local high school students in Kalmar (Sweden).",
     ],
-    images: [],
+    images: [
+      "https://res.cloudinary.com/dpks1z6nw/image/upload/v1783315641/Overview_of_Go_with_the_flow_workshop.jpg",
+      "https://res.cloudinary.com/dpks1z6nw/image/upload/v1783315641/Participants_of_Go_with_the_flow_workshop.jpg",
+      "https://res.cloudinary.com/dpks1z6nw/image/upload/v1783315641/Materials_designed_for_Go_with_the_flow_workshop.jpg",
+    ],
   },
   {
     id: 8,
