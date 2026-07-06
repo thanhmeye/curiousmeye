@@ -31,7 +31,11 @@ export const projects = [
       "The idea was having a clear blue vase with subtle white dusted pattern that evokes a kind of crystal-clear seawater in the sun with foamy white bubbles inviting you to dip in. A reminder of the warm tropical ocean where I come from. And the best part? It is perfectly sized to hold tiny flowers, like the wild anemone shown here.",
       `For the time being, I have found a "cage" and a cute little chicken to accompany the egg :-)`,
     ],
-    images: [],
+    images: [
+      "https://res.cloudinary.com/dpks1z6nw/image/upload/v1783336308/Kosta_glasbruk.jp2",
+      "https://res.cloudinary.com/dpks1z6nw/image/upload/v1783336346/Glassblowing.jp2",
+      "https://res.cloudinary.com/dpks1z6nw/image/upload/v1783336925/Glassblowing%20result.jp2",
+    ],
   },
   {
     id: 10,
