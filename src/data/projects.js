@@ -144,7 +144,11 @@ export const projects = [
       "Here's the magic: As the user places a woodblock on an inkpad, there comes a sound from the artisanal process of making that ink colour - the sound of leaves, the sound of a hammer shattering blocks of red earth into tiny pieces, of seashells and more. This is possible with an electronic setup using a Makey Makey derivative and a DFPlayer MP3 Mini Module.",
       "Those sounds, once heard only by visitors to the village, can now be experienced from far away. The result is a delightful multi-dimensional cultural experience, inviting visual, tactile as well as auditory senses of the user and renewing the forgotten craft in the eyes of young people.",
     ],
-    images: [],
+    images: [
+      "https://res.cloudinary.com/dpks1z6nw/image/upload/v1783342752/Sound_of_Colours_Setup.png",
+      "https://res.cloudinary.com/dpks1z6nw/image/upload/v1783342749/Sound_of_Colours_with_child.png",
+      "https://res.cloudinary.com/dpks1z6nw/image/upload/v1783342748/Sound_of_Colours_with_adult.png",
+    ],
   },
   {
     id: 3,
