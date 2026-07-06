@@ -66,7 +66,7 @@ export const projects = [
     images: [
       "https://res.cloudinary.com/dpks1z6nw/image/upload/v1783315641/Overview_of_Go_with_the_flow_workshop.jpg",
       "https://res.cloudinary.com/dpks1z6nw/image/upload/v1783315641/Participants_of_Go_with_the_flow_workshop.jpg",
-      "https://res.cloudinary.com/dpks1z6nw/image/upload/v1783315641/Materials_designed_for_Go_with_the_flow_workshop.jpg",
+      "https://res.cloudinary.com/dpks1z6nw/image/upload/v1783331808/Materials_designed_for_Go_with_the_flow_workshop.jpg",
     ],
   },
   {
