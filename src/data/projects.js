@@ -83,8 +83,8 @@ export const projects = [
     city: "Växjö (Sweden)",
     collaborators: ["Chimaobi Dennis Edeh, Maike Lanik, Sam Wu"],
     description: [
-      "In light of the EU's new ESPR regulations, furniture manufacturers willl be required to provide a Digital Product Passport (DPP) for every product sold in Europe. DPP is meant to inform consumers at the point of purchasing a product about its environmental footprint. Our team from Linnaeus University partners with a furniture SME in the region to explore how they can prepare themselves for compliance with the ESPR when it takes effects in 2026.", 
-      "We worked with the company to prototype a DPP app using Figma.",
+      "In light of the EU's new Ecodesign for Sustainable Products Regulations (ESPR), furniture manufacturers willl be required to provide a Digital Product Passport (DPP) for every product sold in Europe. DPP is meant to inform consumers at the point of purchasing a product about its material composition and environmental footprint. It also benefits the user and other stakeholders such as recyclers about how the product can be further processed at the end of its life cycle. Our team from Linnaeus University partners with a furniture SME in the region to explore how they can prepare themselves for compliance with the ESPR when it takes effects in 2026.", 
+      "We worked with the company to prototype a DPP app using Figma. The information shown increases transparency around the product, the value chain it came from and particularly how it might be repaired and recycled, therefore minimizing the likelihood of it being prematurely disposed and associated negative impacts on the environment.",
       "Browse our Figma prototype for a sample office chair here: https://www.figma.com/proto/VJOdcGefio8ABG4vQnJeSX/DPP-for-Frapett",
     ],
     images: [],
