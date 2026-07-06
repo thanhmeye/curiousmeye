@@ -32,9 +32,9 @@ export const projects = [
       `For the time being, I have found a "cage" and a cute little chicken to accompany the egg :-)`,
     ],
     images: [
-      "https://res.cloudinary.com/dpks1z6nw/image/upload/v1783336308/Kosta_glasbruk.jp2",
-      "https://res.cloudinary.com/dpks1z6nw/image/upload/v1783336346/Glassblowing.jp2",
-      "https://res.cloudinary.com/dpks1z6nw/image/upload/v1783336925/Glassblowing%20result.jp2",
+      "https://res.cloudinary.com/dpks1z6nw/image/upload/v1783339739/Kosta%20glasswork.png",
+      "https://res.cloudinary.com/dpks1z6nw/image/upload/v1783339898/Glassblowing.png",
+      "https://res.cloudinary.com/dpks1z6nw/image/upload/v1783339840/Glassblowing%20result.png",
     ],
   },
   {
