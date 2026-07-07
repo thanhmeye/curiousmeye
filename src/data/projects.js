@@ -129,8 +129,8 @@ export const projects = [
     collaborators: [],
     description: [
       "In Lam Dong province - Vietnam’s silkworm rearing powerhouse, over 6500 hectares of mulberry plants are grown to feed silkworms. They need pruning annually. As a result, an estimated 117,000 tonnes of pruned mulberry branches are discarded and burnt every year, causing air pollution and CO2 emissions.",
-      "Adopting a circular design approach, we extract waste bark fibers without using chemicals to create natural, biodegradable fiber-based products and services. We developed fiber-based products such as paper, bags and masks and also offered hands-on workshops. Our paper-making activity is especially enjoyed by kids and parents."
-      "Check out some of our prototypes below"
+      "Adopting a circular design approach, we extract waste bark fibers without using chemicals to create natural, biodegradable fiber-based products and services. We developed fiber-based products such as paper, bags and masks and also offered hands-on workshops. Our paper-making activity is especially enjoyed by kids and parents.",
+      "Check out some of our prototypes below",
     ]
     images: [
       "https://res.cloudinary.com/dpks1z6nw/image/upload/v1783422509/WastesNoMore_Fibres.png",
