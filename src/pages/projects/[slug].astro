@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { projects } from '../../data/projects.js';
+import { linkify } from '../../../utils/linkify.js';
 
 export function getStaticPaths() {
   return projects.map((p) => ({ params: { slug: p.slug }, props: { project: p } }));
@@ -40,7 +41,7 @@ const { project } = Astro.props;
     {project.description && project.description.length > 0 && (
       <section class="project-description">
         {(Array.isArray(project.description) ? project.description : [project.description]).map((para) => (
-          <p>{para}</p>
+          <p set:html={linkify(para)} />
         ))}
       </section>
     )}
