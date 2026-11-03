@@ -34,6 +34,18 @@ a {
   text-decoration: none;
 }
 
+.project-description a {
+  color: var(--color-muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: color 0.2s ease;
+}
+
+.project-description a:hover {
+  color: var(--color-text);
+}
+
 /* Nav */
 
 nav {
