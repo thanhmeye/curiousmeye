@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { projects } from '../../data/projects.js';
-import { linkify } from '../../../utils/linkify.js';
+import { linkify } from '../../utils/linkify.js';
 
 export function getStaticPaths() {
   return projects.map((p) => ({ params: { slug: p.slug }, props: { project: p } }));
